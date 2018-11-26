@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Brian Ketelsen</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/blog-home.css" rel="stylesheet">
+</head>
+
+
+<body id="body">
+
+<div id="ROOT" />
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <script src="//cdn.rawgit.com/showdownjs/showdown/1.9.0/dist/showdown.min.js"></script>
+    <script>
+    // because I can't make any of the nim markdown converters work (regex support in js backend)
+    // import this javascript lib and call it from nim code
+    function toMarkdown(markdown)
+    {
+      var converter = new showdown.Converter(),
+      html      = converter.makeHtml(markdown);
+      return html;
+    }
+    </script>
+<script type="text/javascript" src="nimcache/index.js"></script>
+
+</body>
+</html>
